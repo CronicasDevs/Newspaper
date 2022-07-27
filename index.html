@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+	<meta name="viewport" content="width = 1050, user-scalable = no" />
+	<script type="text/javascript" src="./extras//jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="./extras//modernizr.2.5.3.min.js"></script>
+	<link rel="stylesheet" href="./css//basic.css">
+	<title>Donaciones - Cronicas del Oeste</title>
+	<meta name="description" content="Información de los beneficios de haber donado en el servidor">
+	<meta name="theme-color" content="#3a0101">
+</head>
+<body>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(pages/1.png)"></div>
+			<div style="background-image:url(pages/2.png)"></div>
+			<div style="background-image:url(pages/3.png)"></div>
+			<div style="background-image:url(pages/4.png)"></div>
+			<div style="background-image:url(pages/5.png)"></div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+			
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['./lib//turn.js'],
+	nope: ['./lib//turn.html4.min.js'],
+	both: ['./css//basic.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
